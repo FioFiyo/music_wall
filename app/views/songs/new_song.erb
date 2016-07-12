@@ -1,18 +1,32 @@
+<h1>Get your songs on the wall:</h1>
+<hr/>
+
+<% if @song.errors.any? %>
+	<div>
+		<strong> There's been an issue with the song, please try again:</strong>
+		<ul>
+			<% @song.errors.full_messages.each do |message|%>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <form method="post" action="/songs">
 
 	<div>
 		<label>Author:</label>
-		<input type="text" name="author">
+		<input type="text" name="author" value="<% @song.author %>">
 	</div>
 
 	<div>
 		<label>Title:</label>
-		<input type="text" name="title">
+		<input type="text" name="title" value="<% @song.title %>">
 	</div>
 
 	<div>
-		<label>Link:</label>
-		<input type="url" name="link">
+		<label>Url:</label>
+		<input type="url" name="url" value="<% @song.url%>">
 	</div>
 
 	<dir>

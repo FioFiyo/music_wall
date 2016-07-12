@@ -9,7 +9,13 @@ get '/songs' do
 end
 
 get	'/songs/new_song' do
+	@song = Song.new
 	erb :'songs/new_song'
+end
+
+get	'/songs/:id' do
+	@song = Song.find params[:id]
+	erb :'songs/show'
 end
 
 #submiting new data to server, POST request to server
@@ -20,6 +26,9 @@ post '/songs' do
 		author: params[:author],
 		url: params[:url]
 		)
-	@song.save
-	redirect '/songs/new_song'
+	if @song.save
+		redirect '/songs'
+	else
+		erb :'songs/new_song'
+	end
 end
