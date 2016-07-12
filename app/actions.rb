@@ -23,8 +23,12 @@ get '/login' do
 end
 
 get	'/sign_up' do
+	@user = User.new
 	erb :'users/sign_up'
 end
+
+post '/sign_up' do
+
 
 
 #submiting new data to server, POST request to server

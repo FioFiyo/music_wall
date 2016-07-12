@@ -2,17 +2,17 @@
 <form method="post" action="/login">
 	<div>
 		<label>Rockstar name:</label>
-		<input type="text" name="username">
+		<input type="text" name="username" value="<% @user.username%>">
 	</div>
 
 	<div>
 		<label>Email:</label>
-		<input type="email" name="email" >
+		<input type="email" name="email" value="<% @user.email%>" >
 	</div>
 
 	<div>
 		<label>Password</label>
-		<input type="password" name="password">
+		<input type="password" name="password" value="<%@user.password%>">
 	</div>
 
 	<input type="submit" name="Submit">
