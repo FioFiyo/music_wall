@@ -18,10 +18,13 @@ get	'/songs/:id' do
 	erb :'songs/show'
 end
 
-get '/users' do
+get '/login' do
 	erb :'users/login'
 end
 
+get	'/sign_up' do
+	erb :'users/sign_up'
+end
 
 
 #submiting new data to server, POST request to server
