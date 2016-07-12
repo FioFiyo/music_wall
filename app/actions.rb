@@ -18,6 +18,12 @@ get	'/songs/:id' do
 	erb :'songs/show'
 end
 
+get '/users' do
+	erb :'users/login'
+end
+
+
+
 #submiting new data to server, POST request to server
 #telling sinatra to accept this action
 post '/songs' do

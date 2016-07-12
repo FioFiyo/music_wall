@@ -7,7 +7,7 @@ gem 'activesupport'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
-
+#listens to incoming request- puma
 gem 'puma'
 gem 'tux'
 
