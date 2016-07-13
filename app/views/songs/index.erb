@@ -1,9 +1,8 @@
 <% @songs.each do |song| %>
 
 	<div class="song">
-		<h3> <a href="/songs/<%= song.id %>"><%= song.title %></a> <small><%= song.author %></small> </h3>
-		<p> <%= song.url %> </p>
-	</div>
+		<h3> <a href="/songs/<%= song.id %>"><%= song.title.capitalize %></a> <small><%= song.author.capitalize %></small> </h3>
+		<a href=  "<%= song.url %>">Link to Video </a>
 	</div>
 
 	<div class="btn-group" role="group" aria-label="...">
