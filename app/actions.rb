@@ -28,6 +28,11 @@ get	'/songs/:id' do
 	erb :'songs/show'
 end
 
+get	'/songs/delete' do
+	#figure out how to delete song
+	redirect '/homepage'
+end
+
 get '/login' do
 	erb :'users/login'
 end

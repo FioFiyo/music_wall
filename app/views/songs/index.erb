@@ -4,6 +4,16 @@
 		<h3> <a href="/songs/<%= song.id %>"><%= song.title %></a> <small><%= song.author %></small> </h3>
 		<p> <%= song.url %> </p>
 	</div>
-	<a href="/songs/new_song"> Add a song! </a>
+	</div>
+
+	<div class="btn-group" role="group" aria-label="...">
+
+  <a href="/songs/new_song" class="btn btn-default">Add song</a>
+
+  <a href="/homepage" class="btn btn-default">Back to home</a>
+
+  <a href="/songs/delete" class="btn btn-default">Nah, delete</a>
+
+</div>
 
 <% end %>
