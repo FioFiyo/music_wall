@@ -1,4 +1,16 @@
 # Homepage (Root path)
+
+enable :sessions
+
+helpers do
+	def create_session(user)
+		session["current_user"]= user.id
+		session["username"] = user.username
+	end
+end
+
+
+
 get '/' do
   erb :index
 end
@@ -27,8 +39,38 @@ get	'/sign_up' do
 	erb :'users/sign_up'
 end
 
-post '/sign_up' do
+get	'/homepage' do
+	erb :'users/homepage'
+end
 
+post '/sign_up' do
+	@user = User.new(
+		username: params[:username],
+		email: params[:email],
+		password: params[:password] 
+		)
+	if @user.save
+		create_session(@user)
+		redirect '/homepage'
+	else
+		erb :'users/sign_up'
+	end
+end
+
+get '/logout' do
+	session.clear
+	redirect '/'
+end
+
+post '/login' do 
+	@user = User.find_by(:email=>params[:email], :password=>params[:password])
+	if @user
+		create_session(@user)
+		redirect '/homepage'
+	else
+		erb :'users/login'
+	end
+end
 
 
 #submiting new data to server, POST request to server

@@ -1,5 +1,5 @@
 <h1>Welcome Rockstar!</h1>
-<form method="post" action="/login">
+<form method="post" action="/sign_up">
 	<div>
 		<label>Rockstar name:</label>
 		<input type="text" name="username" value="<% @user.username%>">
@@ -12,7 +12,7 @@
 
 	<div>
 		<label>Password</label>
-		<input type="password" name="password" value="<%@user.password%>">
+		<input type="password" name="password" value="<%@user.password%>">	
 	</div>
 
 	<input type="submit" name="Submit">

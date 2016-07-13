@@ -1,0 +1,28 @@
+<% if session["current_user"] %>
+<h1>Hey <%=session["username"] %> !</h1>
+
+<nav class="navbar navbar-inverse">
+	<div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+
+	  <div class="btn-group" role="group">
+	    <button type="button" class="btn btn-default">Your Songs</button>
+	  </div>
+
+
+	  <div class="btn-group" role="group">
+	    <a href="/logout" class="btn btn-default navbar-btn">Logout</a>
+	  </div>
+
+
+	  <div class="btn-group" role="group">
+	    <button type="button" class="btn btn-default">Random</button>
+	  </div>
+
+
+	</div>
+</nav>
+
+
+<% end %>
+
