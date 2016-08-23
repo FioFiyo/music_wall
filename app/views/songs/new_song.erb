@@ -1,4 +1,4 @@
-<h1>Get your songs on the wall:</h1>
+<h1>Get your songs on the wall</h1>
 <hr/>
 
 <% if @song.errors.any? %>
@@ -12,25 +12,53 @@
 	</div>
 <% end %>
 
-<form method="post" action="/songs">
+<!-- 	<form method="post" action="/songs" class="form-horizontal" role="form">
+		<div>
+			<label class="control-label">Author:</label>
+			<input type="text" name="author" value="<% @song.author %>">
+		</div>
 
-	<div>
-		<label>Author:</label>
-		<input type="text" name="author" value="<% @song.author %>">
-	</div>
+		<div>
+			<label class="control-label">Title:</label>
+			<input type="text" name="title" value="<% @song.title %>">
+		</div>
 
-	<div>
-		<label>Title:</label>
-		<input type="text" name="title" value="<% @song.title %>">
-	</div>
+		<div>
+			<label class="control-label">Url:</label>
+			<input type="url" name="url" value="<% @song.url%>">
+		</div>
 
-	<div>
-		<label>Url:</label>
-		<input type="url" name="url" value="<% @song.url%>">
-	</div>
+		<dir>
+			<input type="submit" name="Submit">
+		</dir>
 
-	<dir>
-		<input type="submit" name="Submit">
-	</dir>
+	</form>	
+ -->
 
-</form>	
+
+	<form method="post" action="/songs" class="form-inline">
+
+  <div class="form-group">
+    <label class="sr-only" for="author">Artist/Band</label>
+
+    <input type="text" name="author" value="<% @song.author %>" placeholder="Artist/Band">
+  </div>
+
+  <div class="form-group">
+    <label class="sr-only" for="song title">Song title:</label>
+    <input type="text" name="title" value="<% @song.title %>" placeholder="Song title">
+  </div>
+
+  <div class="form-group">
+    <label class="sr-only" for="video">Video link:</label>
+    <input type="url" name="url" value="<% @song.url%>" placeholder="Video Link">
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<br>
+<% if session["current_user"]%>
+<a href="/homepage" class="btn btn-default">Back to home</a>
+<% else%>
+<a href="/songs" class="btn btn-default">Back to songs</a>
+<% end %>

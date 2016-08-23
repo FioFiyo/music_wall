@@ -1,12 +1,38 @@
-<a href="/login" class="btn btn-default navbar-btn navbar-inverse">Login</a>
-<a href="/sign_up" class="btn btn-default navbar-btn navbar-inverse">Sign Up</a>
-<h1>Home Page</h1>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img alt="brand"src="skateboard_brand.png"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="nav navbar-nav">
+				<a href="/login" class="btn btn-primary btn-lg">Login</a>
+				
+				<a href="/sign_up" class="btn btn-primary btn-lg">Sign Up</a>
+			</div>
+		</div>
+	</div>
+	
+</nav>
+<h1 id="index_h1">JAMS FOR SKATE</h1>
+<h3 id="index_h3">Your go to source for your skate session jams</h3>
+
+<a href="/login" class="btn btn-primary btn-lg index_a">Login</a>
+<a href="/sign_up" class="btn btn-primary btn-lg index_a">Sign Up</a>
+
+<!-- https://www.youtube.com/embed/6Kz0_W2mWzQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen		 -->
+
+
 
 <!-- 
-<% if session["current_user"] %>
-	<h4>You logged in Successfully and Your session is created.
-	<h6>Your username is: <%=session["user_name"]%>
-	<br> -->
-<!-- 	<a href="/sign_out">Sign out</a>
-<% end %> -->
-
+	<% if session["current_user"] %>
+		<h4>You logged in Successfully and Your session is created.
+		<h6>Your username is: <%=session["user_name"]%>
+		<br> -->
+	<!-- 	<a href="/sign_out">Sign out</a>
+	<% end %> -->

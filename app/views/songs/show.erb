@@ -1,7 +1,15 @@
 
 <h1> <%= @song.title %> </h1>
 <p> <%=@song.author %>	</p>
-<div><a href="<%= @song.url %>"> Video </a></div>
+<% if session["current_user"] %>
+<p>Post by: <%= session["username"]%> </p>
+<% else %>
+<p>Post by: Anonymous </p>
+<% end %>
+
+<video width="560" height="315" src="<%= @song.url %>" controls></video>
+
+<!-- <div><a href="<%= @song.url %>"> Video </a></div> -->
 </br>
 
 </hr>
