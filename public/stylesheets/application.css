@@ -1,6 +1,7 @@
 body {
 	/*background-image: url("http://cdn.fabulousblogging.com/wp-content/uploads/2012/10/wood_pattern_@2X.png?bcbabf");*/
 	background-color: white;
+	padding-bottom: 70px;
 }
 footer {
 	background-color: #f8f8f8;
@@ -10,16 +11,11 @@ footer {
 	padding-top: 10px;
 }
 
+div.container-fluid {
+	/*margin-bottom: 80px;*/
+}
+
 /* index.erb*/
-
-/*.index_a{
-	display: inline-block;
-	width: 200px;
-	margin-left: 250px;
-	background-color: black;
-	border:none;
-}*/
-
 #index_h1{
 	color:black;
 	font-size: -webkit-xxx-large;
@@ -75,5 +71,55 @@ p.sentence_login {
   width: 300px;
   margin: 8px 10px 10px -60px;
 
+}
+
+/*Homepage nav*/
+.add-song-button {
+	background-color: darkorange;
+	border: none;
+}
+.add-song-button:hover {
+	background-color: orange;
+	color: whitesmoke;
+}
+div.homepage {
+	margin-top: 8px;
+}
+span.username {
+	font-family: 'Ubuntu', sans-serif;
+	color: dodgerblue;
+}
+
+div.container {
+	  background-color: #f8f8f8;
+    height: 53px;
+    width: 1399px;   
+}
+div.container-fluid {
+	margin-right: 35px;
+    margin-left: 35px;
+}
+.navbar-default {
+	border-color: transparent;
+}
+.glyphicon-music {
+	padding-right: 8px;
+}
+.glyphicon-user {
+	padding-right: 3px;
+	color:#a1c057;
+}
+.left-button {
+	border-style: none;
+	background-color: transparent;
+	color: grey;
+}
+.left-button:hover {
+	color: darkorange;
+	background-color: none;
+}
+
+.username {
+	padding-right: 5px;
 }
 

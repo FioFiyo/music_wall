@@ -1,33 +1,25 @@
-<% if session["current_user"] %>
-<h1><center>Hey <%=session["username"] %> !</center></h1>
-
-<nav class="navbar navbar-inverse">
-	<div class="btn-group btn-group-justified" role="group" aria-label="...">
-
-
-	  <div class="btn-group" role="group">
-	    <a href="/songs" class="btn btn-default">Song Wall</a>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="nav secondary-nav navbar-right homepage">
+			<% if session["current_user"] %>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="username"><strong><%=session["username"] %></strong></span>
+			 <a href="/songs/new_song" class="btn btn-default add-song-button"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Add song</a>
 	  </div>
+	 <a class="navbar-brand" href="/homepage"><img alt="brand"src="skateboard_brand.png"></a>
+	  <a href="/songs" class="btn btn-default left-button">Song Wall</a>
 
 
-	  <div class="btn-group" role="group">
-	    <a href="/logout" class="btn btn-default navbar-btn">Logout</a>
-	  </div>
+	  <a href="/logout" class="btn btn-default navbar-btn left-button">Logout</a>
 
-
-	  <div class="btn-group" role="group">
-	    <a href="/songs/new_song" class="btn btn-default">Add song</a>
-	  </div>
 	</div>
-	
-<form class="navbar-form navbar-left" role="search">
+</nav>
+
+<!-- <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search song">
   </div>
   <a href="x" class="btn btn-default">Now</a>
-</form>
-</nav>
-
+</form> -->
 
 <% end %>
 
