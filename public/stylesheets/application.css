@@ -109,6 +109,7 @@ div.container-fluid {
 	padding-right: 3px;
 	color:#a1c057;
 }
+
 .left-button {
 	border-style: none;
 	background-color: transparent;
@@ -118,8 +119,18 @@ div.container-fluid {
 	color: darkorange;
 	background-color: none;
 }
-
+.home-page-glyph {
+	margin-top: 10px;
+	border-style:none;
+	background-color: transparent;
+}
 .username {
 	padding-right: 5px;
+}
+
+/* Song index*/
+.song-container {
+  margin-top: 4px;
+  padding-bottom: 50px;
 }
 
