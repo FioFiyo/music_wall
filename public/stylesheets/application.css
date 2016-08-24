@@ -1,5 +1,13 @@
 body {
-	background-image: url("http://cdn.fabulousblogging.com/wp-content/uploads/2012/10/wood_pattern_@2X.png?bcbabf");
+	/*background-image: url("http://cdn.fabulousblogging.com/wp-content/uploads/2012/10/wood_pattern_@2X.png?bcbabf");*/
+	background-color: white;
+}
+footer {
+	background-color: #f8f8f8;
+	height: 45px;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 /* index.erb*/
@@ -19,24 +27,53 @@ body {
 	text-align: center;
 }
 #index_h3{
-	color: white;
+	color: black;
 	font-size:23px;
-	text-align: center
+	font-family:'Lato', sans-serif;
+	text-align: center;
 }
 img {
 	  width: 36px;
     margin: -9px -9px;
 }
-/* login and signup*/
-
-form{
-	float: left;
+p {
+	text-align: center;
 }
 
+/* login and signup*/
+
+a.login_anchor {
+  padding-right: 20px;
+	line-height: 3;
+}
+div.form{
+	margin-left: 43%;
+	margin-right: 50%;
+}
+div.submit {
+	margin-top: 10px;
+;
+}
+input.submit {
+	background-color: #a1c058;
+  border-radius: 10px;
+  border-style: none;
+  padding: 5px 58px;
+}
 #l_h1{
 	color:black;
 	font-size: -webkit-xxx-large;
 	font-family: 'Amatic SC', cursive;
 	text-align: center;
+}
+div.wrap_login {
+	width: 200px;
+	margin-top: 15px;
+}
+
+p.sentence_login {
+  width: 300px;
+  margin: 8px 10px 10px -60px;
+
 }
 

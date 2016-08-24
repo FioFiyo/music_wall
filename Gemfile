@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gem 'rake'
 gem 'activesupport'
 
+gem 'sinatra-flash'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'

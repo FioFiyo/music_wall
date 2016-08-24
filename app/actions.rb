@@ -1,4 +1,6 @@
 # Homepage (Root path)
+require 'sinatra'
+require 'sinatra/flash'
 
 enable :sessions
 
@@ -56,6 +58,7 @@ post '/sign_up' do
 		create_session(@user)
 		redirect '/homepage'
 	else
+		flash[:error] = @user.errors.full_messages
 		erb :'users/sign_up'
 	end
 end
@@ -71,6 +74,7 @@ post '/login' do
 		create_session(@user)
 		redirect '/homepage'
 	else
+		flash[:notice] = "Wrong email or password, try again..."
 		erb :'users/login'
 	end
 end
