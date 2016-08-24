@@ -1,3 +1,22 @@
+<nav class="navbar navbar-default ">
+	<div class="container-fluid">
+		<div class="nav secondary-nav navbar-right homepage">
+			<% if session["current_user"] %>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="username"><strong><%=session["username"] %></strong></span>
+			 <a href="/songs/new_song" class="btn btn-default add-song-button"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Add song</a>
+	  </div>
+	 <a class="navbar-brand" href="/homepage"><img alt="brand"src="/skateboard_brand.png"></a>
+	  <a href="/songs" class="btn btn-default left-button">Song Wall</a>
+
+
+	  <a href="/logout" class="btn btn-default navbar-btn left-button">Logout</a>
+	  <%end%>
+	</div>
+</nav>
+
+
+
+
 
 <h1> <%= @song.title %> </h1>
 <p> <%=@song.author %>	</p>
