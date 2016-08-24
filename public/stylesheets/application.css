@@ -119,18 +119,40 @@ div.container-fluid {
 	color: darkorange;
 	background-color: none;
 }
-.home-page-glyph {
-	margin-top: 10px;
-	border-style:none;
-	background-color: transparent;
-}
+
 .username {
 	padding-right: 5px;
 }
 
 /* Song index*/
-.song-container {
+
+div.song-container {
+	/*background-color: lightpink;*/
+	border: 0.5px solid lightgrey;
+	border-radius: 5px;
+	display: inline-block;
+	height: 320%;
   margin-top: 4px;
-  padding-bottom: 50px;
+  margin-left: 0; 
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  width: 20%; 
+}
+div.song-columns {
+
+	color: black;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
 }
 
+div.font-title{
+	color:#f96d6d;
+	font-weight: 3px
+}
+.trash{
+	margin-left: 3px;
+}
+.video-link {
+	color:black;
+}

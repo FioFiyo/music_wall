@@ -6,6 +6,7 @@
      <a href="/songs/new_song" class="btn btn-default add-song-button"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Add song</a>
     </div>
     <a class="navbar-brand" href="/homepage"><img alt="brand"src="skateboard_brand.png"></a>
+    <a href="/logout" class="btn btn-default navbar-btn left-button">Logout</a>
     <% else %>
     <a href="/" class="btn btn-default"></a>
     <% end %>
@@ -15,11 +16,15 @@
 <% @songs.each do |song| %>
 
 <div class="container-fluid song-container">
-	<div class="song">
-		<h3> <a href="/songs/<%= song.id %>"><%= song.title.capitalize %></a> <small><%= song.author.capitalize %></small> </h3>
-		<a href=  "<%= song.url %>">Link to Video </a>
-     <a href="/songs/delete" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
-	</div>
-
+  <div class="row">
+  	<div class=".col-md-12 song-columns">
+  		<div class="font-title"><h3> <a href="/songs/<%= song.id %>" class="video-link"><%= song.title.capitalize %></a></h3><small><em><%= song.author.capitalize %></em></small>
+      </div>
+      <div class="">
+      <a href="<%= song.url %>"><small class="video-link">Link to Video</small></a>
+      </div>
+      <a href="/songs/delete" class="btn btn-default trash"><span class="glyphicon glyphicon-trash"></span></a>
+  	</div>
+  </div>
 </div>
 <% end %>
