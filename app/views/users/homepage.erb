@@ -13,6 +13,20 @@
 
 	</div>
 </nav>
+<h2 style="display:block;text-align: center; font-family:'Amatic SC', cursive; font-size:42px;"> Your current songs on the wall
+<% @user_songs.each do |song|%></h2>
+<div class="container-fluid homepage-container">
+	<div class="row">
+		<div class="col-12-mid" style="background-color:; width: 350px; height: 200px; margin-left:-50px;">
+			<div>
+      <% url = song.url.sub(/watch\?v=/,'embed/')%>
+			<object style="margin-top: 0;
+    margin-left: 24px;" data="<%= url%>"></object>	
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>
 
 <!-- <form class="navbar-form navbar-left" role="search">
   <div class="form-group">

@@ -18,18 +18,18 @@
 
 
 
-<h1> <%= @song.title %> </h1>
+<h1 style="text-align: center"> <%= @song.title %> </h1>
 <p> <%=@song.author %>	</p>
 <% if session["current_user"] %>
-<p>Post by: <%= session["username"]%> </p>
+<p>Post by: <%= @username%> </p>
 <% else %>
 <p>Post by: Anonymous </p>
 <% end %>
 
-<video width="560" height="315" src="<%= @song.url %>" controls></video>
+<% url = @song.url.sub(/watch\?v=/,'embed/')%>
+<object style="width:100%;height:100%;width: 820px; height: 461.25px; float: none; clear: both; margin: 2px auto;margin-left: 290px" data="<%= url%>" class="video"></object>
+<% if session["current_user"] == @user.id%>
+<a href="/songs/delete" class="btn btn-default trash"><span class="glyphicon glyphicon-trash"> Delete</span></a>
+<%end%>
 
-<!-- <div><a href="<%= @song.url %>"> Video </a></div> -->
-</br>
 
-</hr>
-<a href="/songs"> Back to main page </a>

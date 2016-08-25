@@ -26,13 +26,20 @@ get	'/songs/new_song' do
 end
 
 get	'/songs/:id' do
-	@song = Song.find params[:id]
+	@song = Song.find(params[:id])
+	@user_id = @song.user_id
+	@user = User.find(@user_id)
+	@username = @user.username
+
 	erb :'songs/show'
 end
 
-get	'/songs/delete' do
+delete '/songs/:id' do
+	@song = Song.find(params[:id])
 	#figure out how to delete song
+	@song.destroy
 	redirect '/homepage'
+	flash[:notice] = "Your song was deleted"
 end
 
 get '/login' do
@@ -45,6 +52,9 @@ get	'/sign_up' do
 end
 
 get	'/homepage' do
+	@user_id = session["current_user"]
+	@user_songs = Song.where(user_id: @user_id)
+
 	erb :'users/homepage'
 end
 
@@ -83,10 +93,12 @@ end
 #submiting new data to server, POST request to server
 #telling sinatra to accept this action
 post '/songs' do
+	@user = User.find(session["current_user"])
 	@song = Song.new(
 		title: params[:title],
 		author: params[:author],
-		url: params[:url]
+		url: params[:url],
+		user_id: @user.id
 		)
 	if @song.save
 		redirect '/songs'
